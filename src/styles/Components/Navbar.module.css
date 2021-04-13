@@ -1,0 +1,72 @@
+:root{
+    --filterDark:brightness(0%);
+    --filterGray:grayscale();
+}
+
+.NavbarImg {
+    filter:Brightness(100000%) grayscale();
+    margin-bottom:1rem;
+}
+  
+.Navbar {
+    background-color: var(--NavBarColor);
+    height: 100vh;
+    width:3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    font-size: 1.5rem;
+    transition:width 0.2s;
+    box-shadow: 2px 2px 30px 2px  rgba(0, 0, 0, 0.2);
+}
+  
+.Navbar:hover {
+    width: 6rem;
+}
+  
+.NavbarTitle p{
+    color: var(--lightTextColor);
+    font-weight:bold;
+    font-size: 80%;
+    display:none;
+    position: absolute;
+    margin-left: 0.5rem;
+}
+  
+.Navbar:hover .NavbarTitle p{
+    display:inline-block;
+}
+  
+.NavbarTitle{
+    background-color: var(--NavBarColor);
+}
+  
+.NavbarTitle img{
+    filter:invert();
+    width:2.8rem;
+    height:2.8rem;
+}
+  
+.NavbarDiv{
+    width:90%;
+    padding:0.9rem 0;
+}
+  
+.NavbarDivActive{
+    border-radius: 0 5px 5px 0 ;
+    background-color: var(--NavBarHoverColor);
+    cursor:pointer;
+    width:90%;
+    padding:0.9rem 0;
+}
+  
+.NavbarDiv:hover{
+    border-radius: 0 5px 5px 0 ;
+    background-color: var(--NavBarHoverColor);
+    cursor:pointer;
+}
+  
+.Navbar:hover .NavbarTitle img{
+    width:2rem;
+    height:2rem;
+}
