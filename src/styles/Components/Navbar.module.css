@@ -21,24 +21,21 @@
 }
   
 .Navbar:hover {
-    width: 6rem;
+    width: 8rem;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
-  
+
 .NavbarTitle p{
     color: var(--lightTextColor);
     font-weight:bold;
-    font-size: 80%;
     display:none;
-    position: absolute;
+    font-size: 80%;
     margin-left: 0.5rem;
 }
   
 .Navbar:hover .NavbarTitle p{
-    display:inline-block;
-}
-  
-.NavbarTitle{
-    background-color: var(--NavBarColor);
+    display: inline-flex;
 }
   
 .NavbarTitle img{
@@ -46,27 +43,21 @@
     width:2.8rem;
     height:2.8rem;
 }
-  
+
+.Navbar:hover .NavbarTitle img{
+    width:2rem;
+    height:2rem;
+}
+
 .NavbarDiv{
+    display:inline-flex;
+    align-items:center;
     width:90%;
-    padding:0.9rem 0;
+    padding:0.8rem 0;
 }
-  
-.NavbarDivActive{
-    border-radius: 0 5px 5px 0 ;
-    background-color: var(--NavBarHoverColor);
-    cursor:pointer;
-    width:90%;
-    padding:0.9rem 0;
-}
-  
+
 .NavbarDiv:hover{
     border-radius: 0 5px 5px 0 ;
     background-color: var(--NavBarHoverColor);
     cursor:pointer;
-}
-  
-.Navbar:hover .NavbarTitle img{
-    width:2rem;
-    height:2rem;
 }
