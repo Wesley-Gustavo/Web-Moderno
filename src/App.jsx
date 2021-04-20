@@ -1,7 +1,7 @@
 import Navbar from './components/Navbar';
 import Início from './pages/Início'
 import Base from './pages/Texto2'
-import './styles/Global.css';
+import './styles/Global.css'; 
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 function App() {
@@ -14,21 +14,19 @@ function App() {
       </head>
 
       <body className="bodyContainer">
-        <div className="navbarContainer">
-          <Navbar/>
-        </div>
+        <Router>
+          <div className="navbarContainer">
+            <Navbar/>
+          </div>
 
-        <section className="contentContainer">
-
-          <Router>
+          <section className="contentContainer">
             <Switch>
               <Route path="/" exact component={Início} /> 
               <Route path="/início" component={Início} />
               <Route path="/base" component={Base} />
             </Switch>
-          </Router>
-
-        </section>
+          </section>
+        </Router>
 
       </body>
 
