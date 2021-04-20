@@ -5,14 +5,15 @@ import styles from '../styles/Components/Navbar.module.css';
         <div className={styles.Navbar}>
           <img className={styles.NavbarImg} src="Coder.png"/>
 
-          <div className={styles.NavbarTitle}>
-                  <a href="#" className={styles.NavbarDiv}><img src="icons/002-app.svg"/><p>Início</p></a>
-                  <a href="#" className={styles.NavbarDiv}><img src="icons/005-coding.svg"/><p>Base</p></a>
-                  <a href="#" className={styles.NavbarDiv}><img src="icons/020-html.svg"/><p>Html</p></a>
-                  <a href="#" className={styles.NavbarDiv}><img src="icons/015-css.svg"/><p>CSS</p></a>
-                  <a href="#" className={styles.NavbarDiv}><img src="icons/react.svg"/><p>React</p></a>
-            </div>
-          </div>
+          <nav className={styles.NavbarTitle}>
+            <a href="início" className={styles.NavbarDiv}><img src="icons/002-app.svg"/><p>Início</p></a>
+            <a href="base" className={styles.NavbarDiv}><img src="icons/005-coding.svg"/><p>Base</p></a>
+            <a href="html" className={styles.NavbarDiv}><img src="icons/020-html.svg"/><p>Html</p></a>
+            <a href="css" className={styles.NavbarDiv}><img src="icons/015-css.svg"/><p>CSS</p></a>
+            <a href="react" className={styles.NavbarDiv}><img src="icons/react.svg"/><p>React</p></a>
+          </nav>
+
+        </div>
     )
 }
 
