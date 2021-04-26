@@ -2,12 +2,11 @@ import React, {Suspense, lazy} from 'react'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 //Components
 import Navbar from './components/Navbar';
-import {Load} from './components/LazyLoad';
 //Styles
 import './styles/Global.css';
 //Pages
-const Início = lazy(() => import('./pages/Início'));
-const Base = lazy(() => import('./pages/Texto2'));
+import Início from './pages/Início';
+import Base from './pages/Texto2';
 
 function App() {
   return (
@@ -24,13 +23,11 @@ function App() {
           </div>
 
           <section className="contentContainer">
-            <Suspense fallback={<Load/>}>
               <Switch>
                 <Route path="/" exact component={Início} /> 
                 <Route path="/início" component={Início} />
                 <Route path="/base" component={Base} />
               </Switch>
-            </Suspense>
           </section>
         </Router>
       </body>
