@@ -1,13 +1,3 @@
-:root{
-    --filterDark:brightness(0%);
-    --filterGray:grayscale();
-}
-
-.NavbarImg {
-    filter:Brightness(100000%) grayscale();
-    margin-bottom:1rem;
-}
-  
 .Navbar {
     background-color: var(--NavBarColor);
     height: 100vh;
@@ -39,7 +29,7 @@
 }
   
 .NavbarTitle img{
-    filter:invert();
+    filter:var(--filterLight);
     width:2.8rem;
     height:2.8rem;
 }
