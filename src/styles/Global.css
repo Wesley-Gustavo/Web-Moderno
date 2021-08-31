@@ -29,11 +29,15 @@ a{
 }
 
 .navbarContainer{
+  z-index: 2028;
   position:fixed;
 }
 
 .contentContainer{
   margin:1rem 8rem 1rem 8rem;
+  display:flex;
+  align-items:center;
+  flex-direction: column;
 }
 
 /* width */

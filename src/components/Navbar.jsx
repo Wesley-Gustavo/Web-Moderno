@@ -1,6 +1,8 @@
 import styles from '../styles/Components/Navbar.module.css';
 import { Link } from "react-router-dom"
 
+
+
  function Navbar(){
     return(
         <div className={styles.Navbar}>

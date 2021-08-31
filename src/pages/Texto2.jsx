@@ -1,11 +1,9 @@
 import styles from '../styles/Pages/Início.module.css'
 
  function  Texto2(){
-    
-
     return (
         <>
-        <head><title>Web-Moderno | Texto2</title></head>
+        <title>Web-Moderno | Texto2</title>
         <div className={styles.Text}>
             <h1>Texto2</h1>
             <p>

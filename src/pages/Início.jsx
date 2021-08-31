@@ -5,7 +5,7 @@ import styles from '../styles/Pages/Início.module.css'
 
     return (
         <>
-        <head><title>Web-Moderno | Início</title></head>
+        <title>Web-Moderno | Início</title>
         <div className={styles.Text}>
             <h1>Lorem ipsum</h1>
             <p>
