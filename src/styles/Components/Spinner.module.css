@@ -2,7 +2,7 @@
     animation: rotation 5s linear infinite;
     height: 90%;
     width: 90%;
-    filter:invert();
+    filter:var(--filterLight);
 }
 
 @keyframes rotation {

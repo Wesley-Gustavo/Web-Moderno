@@ -1,19 +1,26 @@
 .Navbar {
     background-color: var(--NavBarColor);
-    height: 100vh;
-    width:3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
     font-size: 1.5rem;
-    transition:width 0.2s;
     box-shadow: 2px 2px 30px 2px  rgba(0, 0, 0, 0.2);
+
+    width: 100vw;
+    height:4rem;
+
+    display: flex;
+    
+    overflow-x: auto;
+    overflow-y: hidden;
+}    
+
+.Navbar:hover {
+    height:6rem;
+    transition:height 0.2s;
 }
 
 .NavbarImg {
     filter:var(--filterLight);
     /*animation:rotation 4s linear infinite;*/
-  }
+}
   
   @keyframes rotation {
       from {
@@ -23,45 +30,44 @@
         transform: rotate(359deg);
       }
     }
-  
-.Navbar:hover {
-    width: 8rem;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
 
 .NavbarTitle p{
     color: var(--lightTextColor);
     font-weight:bold;
-    display:none;
+    opacity: 0;
     font-size: 80%;
-    margin-left: 0.5rem;
+    text-align: center;
+    transition: opacity 0.3s;
 }
   
 .Navbar:hover .NavbarTitle p{
-    display: inline-flex;
+    opacity:100%;
 }
   
-.NavbarTitle img{
+.NavbarDiv img{
     filter:var(--filterLight);
-    width:2.8rem;
-    height:2.8rem;
+    width:2.2rem;
+    height:2.2rem;
 }
 
-.Navbar:hover .NavbarTitle img{
+.Navbar:hover .NavbarDiv img{
     width:2rem;
     height:2rem;
 }
 
 .NavbarDiv{
-    display:inline-flex;
+    display:flex;
+    flex-direction:Column;
     align-items:center;
-    width:90%;
-    padding:0.8rem 0;
+    padding: 0.8rem;
 }
 
 .NavbarDiv:hover{
-    border-radius: 0 5px 5px 0 ;
+    border-radius: 0 0 5px 5px ;
     background-color: var(--NavBarHoverColor);
     cursor:pointer;
+}
+.NavbarTitle{
+    display:flex;
+    gap:0.4rem;
 }

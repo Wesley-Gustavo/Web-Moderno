@@ -1,0 +1,20 @@
+.ImageLoad{
+    height: 20rem;
+    width: 20rem;
+    border-radius:5px;
+    background: linear-gradient(130deg,#2a3447, #4c6188, #2a3447);
+    background-size: 200%;
+    animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

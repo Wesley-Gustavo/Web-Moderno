@@ -1,14 +1,21 @@
 :root {
   --DarkTextColor: #000000;
+
   --NavBarColor: #2a3447;
   --NavBarHoverColor: #394761;
+
   --BackgroundColor: #282c34;
-  --scrollbarColor: #4c6188;
+  --BackgroundColorGradient: linear-gradient(90deg, rgba(208,80,101,1) 0%, rgba(76,121,209,1) 100%);
+
+  --scrollbarColor: linear-gradient(180deg, rgb(240, 76, 125)0%, rgb(68, 127, 255) 100%);
+
   --lightTextColor: #ffff;
+
   --LinkTextColor: #5472aa;
+
   --filterLight:invert();
 }
-
+  
 html{
   background-color: var(--BackgroundColor);
 }
@@ -21,7 +28,7 @@ a{
 *{
   margin: 0;
   padding:0;
-  font-family:'Rajdhani', sans-serif;;
+  font-family:'Roboto', sans-serif;
 }
 
 .bodyContainer{
@@ -34,7 +41,7 @@ a{
 }
 
 .contentContainer{
-  margin:1rem 8rem 1rem 8rem;
+  margin:3rem 8rem 1rem 8rem;
   display:flex;
   align-items:center;
   flex-direction: column;
@@ -43,6 +50,7 @@ a{
 /* width */
 ::-webkit-scrollbar {
   width: 0.6rem;
+  height: 0.6rem;
 }
 
 /* Track */
@@ -52,20 +60,23 @@ a{
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--scrollbarColor); 
   border-radius: 5px;
-  min-height: 4srem;
+  min-height: 4rem;
+  min-width: 4rem;
+
+  background:var(--scrollbarColor);
+  
+  /* linear-gradient(120deg,#d62a2a, #ca572a, #d1ad35, #dadd30, #1cb135, #1fb2b9, #2d24b8)*/;
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--NavBarHoverColor)
-}
+/*::-webkit-scrollbar-thumb:hover {
+}*/
 
 @media(max-width:720px){
 
   .contentContainer{
-    margin:1rem 1rem 1rem 4rem;
+    margin:5rem 1rem 1rem 1rem;
   }
 
   html{

@@ -1,5 +1,6 @@
 import React, {Suspense, lazy } from 'react'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import Trianglify from 'react-trianglify'
 //Components
 import Navbar from './components/Navbar';
 import Spinner from './components/Spinner';
@@ -11,18 +12,22 @@ const Base = lazy(() => import('./pages/Texto2'));
 
 function App() {
   return (
-      <div className="bodyContainer">
+      <div className="bodyContainer" id="bodyContainer">
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+       <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,300&display=swap" rel="stylesheet"/>
+        
         <Router>
           <div className="navbarContainer">
             <Navbar/>
           </div>
           
           <section className="contentContainer">
-            <Suspense fallback={<Spinner/>} >
+            <Suspense fallback={<Spinner/>}>
               <Switch>
                 <Route path="/" exact component={Inicio}/> 
                 <Route path="/início" component={Inicio}/>
-                <Route path="/base" component={Base}/>
+                <Route path="/base" component={Base}/>''''
               </Switch>
             </Suspense>
           </section>
