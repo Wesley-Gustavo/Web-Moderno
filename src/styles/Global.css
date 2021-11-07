@@ -1,17 +1,14 @@
 :root {
-  --DarkTextColor: #000000;
+  --DarkTextColor: #1e2129;
 
-  --NavBarColor: #2a3447;
-  --NavBarHoverColor: #394761;
+  --NavbarColor: #474747;
+  --NavbarHoverColor: #636363;
 
-  --BackgroundColor: #282c34;
-  --BackgroundColorGradient: linear-gradient(90deg, rgba(208,80,101,1) 0%, rgba(76,121,209,1) 100%);
-
-  --scrollbarColor: linear-gradient(180deg, rgb(240, 76, 125)0%, rgb(68, 127, 255) 100%);
+  --BackgroundColor: #353535;
 
   --lightTextColor: #ffff;
 
-  --LinkTextColor: #5472aa;
+  --LinkTextColor: #adadad;
 
   --filterLight:invert();
 }
@@ -36,7 +33,7 @@ a{
 }
 
 .navbarContainer{
-  z-index: 2028;
+  z-index: 1;
   position:fixed;
 }
 
@@ -64,19 +61,20 @@ a{
   min-height: 4rem;
   min-width: 4rem;
 
-  background:var(--scrollbarColor);
+  background:var(--LinkTextColor);
   
   /* linear-gradient(120deg,#d62a2a, #ca572a, #d1ad35, #dadd30, #1cb135, #1fb2b9, #2d24b8)*/;
 }
 
 /* Handle on hover */
-/*::-webkit-scrollbar-thumb:hover {
-}*/
+::-webkit-scrollbar-thumb:hover {
+  background:var(--NavbarHoverColor);
+}
 
 @media(max-width:720px){
 
   .contentContainer{
-    margin:5rem 1rem 1rem 1rem;
+    margin:3rem 0rem 0rem 0rem;
   }
 
   html{

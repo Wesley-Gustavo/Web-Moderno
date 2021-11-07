@@ -1,47 +1,25 @@
 .Navbar {
-    background-color: var(--NavBarColor);
+    background-color: var(--NavbarColor);
     font-size: 1.5rem;
     box-shadow: 2px 2px 30px 2px  rgba(0, 0, 0, 0.2);
+    position:fixed;
 
-    width: 100vw;
+    width: 99.4vw;
     height:4rem;
 
     display: flex;
-    
-    overflow-x: auto;
-    overflow-y: hidden;
 }    
-
-.Navbar:hover {
-    height:6rem;
-    transition:height 0.2s;
-}
 
 .NavbarImg {
     filter:var(--filterLight);
     /*animation:rotation 4s linear infinite;*/
 }
-  
-  @keyframes rotation {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(359deg);
-      }
-    }
 
 .NavbarTitle p{
     color: var(--lightTextColor);
-    font-weight:bold;
-    opacity: 0;
-    font-size: 80%;
+    font-size: 70%;
+    font-weight: bold;
     text-align: center;
-    transition: opacity 0.3s;
-}
-  
-.Navbar:hover .NavbarTitle p{
-    opacity:100%;
 }
   
 .NavbarDiv img{
@@ -50,24 +28,39 @@
     height:2.2rem;
 }
 
-.Navbar:hover .NavbarDiv img{
-    width:2rem;
-    height:2rem;
-}
-
 .NavbarDiv{
+    padding: 0.3rem 1rem 0rem 1rem;
     display:flex;
     flex-direction:Column;
     align-items:center;
-    padding: 0.8rem;
+
+    background-image: linear-gradient(#fff, #fff);
+    background-position: 0 100%; /*OR bottom left*/
+    background-size: 0% 0.3rem;
+    background-repeat: no-repeat;
+    transition:
+    background-size 0.3s,
+    background-position 0s 0.3s; /*change after the size immediately*/
 }
 
 .NavbarDiv:hover{
     border-radius: 0 0 5px 5px ;
-    background-color: var(--NavBarHoverColor);
+    background-color: var(--NavbarHoverColor);
     cursor:pointer;
+
+    background-position: 100% 100%; /*OR bottom right*/
+    background-size: 100% 0.3rem;
+
 }
+
 .NavbarTitle{
     display:flex;
-    gap:0.4rem;
+    gap:1rem;
+}
+
+@media(max-width:720px){
+    .Navbar {
+        width:100vw;
+        bottom:0;
+    }
 }
