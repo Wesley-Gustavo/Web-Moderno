@@ -1,15 +1,14 @@
 .SpinImg{
-    animation: rotation 5s linear infinite;
-    height: 90%;
-    width: 90%;
-    filter:var(--filterLight);
+  animation: rotation 5s linear infinite;
+  width: 20rem;
+  filter:var(--filterLight);
 }
 
 @keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(359deg);
-    }
+  from {
+     transform: rotate(0deg);
   }
+  to {
+    transform: rotate(359deg);
+  }
+}

@@ -2,6 +2,7 @@ import React, {Suspense, lazy } from 'react'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 //Components
 import Navbar from './components/Navbar';
+import Profile from './components/Profile';
 import Spinner from './components/Spinner';
 //Styles
 import './styles/Global.css';
@@ -19,6 +20,7 @@ function App() {
         <Router>
           <div className="navbarContainer">
             <Navbar/>
+            <Profile/>
           </div>
           
           <section className="contentContainer">

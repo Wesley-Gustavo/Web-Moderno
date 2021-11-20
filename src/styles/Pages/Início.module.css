@@ -1,17 +1,23 @@
 .Text{
     color: var(--lightTextColor);
     /*background-color: var(--NavBarColor);*/
-    border-radius: 5px;
-    padding:2rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
     /*box-shadow:inset 2px 2px 30px 2px  rgba(0, 0, 0, 0.2);*/
 }
 
-.Text h1{
-    text-align: center;
+
+.TittleText h1{
+    font-size:2rem;
+    padding-left:clamp(0.5rem, 10vh, 10rem);
+    padding-bottom:1rem;
 }
-.Text h2{
+
+.TittleText h2{
     font-size:1.3rem;
-    text-align: center;
+    padding-left:clamp(0.5rem, 10vh, 10rem);
+    width: clamp(1rem, 45vw + 10vh, 80vw);
 }
 
 .TittleText{
@@ -20,10 +26,13 @@
     background-attachment: fixed;
     background-size:cover;
 
-    border-radius: 5px;
-    padding:1rem;
+    width: 100%;
+    padding:7rem 0rem 7rem 0rem;
 }
 
-@media(max-width:720px){
-
+.Text p{
+    width:80%;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
 }

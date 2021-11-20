@@ -1,19 +1,42 @@
 .Profile{
     position: fixed;
+    display:flex;
+    align-content: center;
+
     right:0;
     top:0;
-    padding:0.5rem;
 }
 
+.Link{
+    background: none;
+	color: inherit;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
 
 .Icon{
-    opacity: 70%;
     border-radius: 50%;
     width:2.7rem;
     height:2.7rem;
     filter:var(--filterLight);
 }
 
-@media(max-width:720px){
+.Icon:hover {
+    cursor:pointer;
+}
 
+.DevImg{
+    height:100px;
+    width:100px;
+    border-radius: 50%;
+}
+
+@media(max-width:720px){
+    .Icon{
+        opacity: 70%;
+        width:2rem;
+        height:2rem;
+    }
 }

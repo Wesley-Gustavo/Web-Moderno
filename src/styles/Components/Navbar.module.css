@@ -29,6 +29,7 @@
 }
 
 .NavbarDiv{
+    border-radius: 0 0 5px 5px ;
     padding: 0.3rem 1rem 0rem 1rem;
     display:flex;
     flex-direction:Column;
@@ -44,7 +45,6 @@
 }
 
 .NavbarDiv:hover{
-    border-radius: 0 0 5px 5px ;
     background-color: var(--NavbarHoverColor);
     cursor:pointer;
 

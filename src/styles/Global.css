@@ -1,26 +1,49 @@
 :root {
   --DarkTextColor: #1e2129;
 
-  --NavbarColor: #474747;
-  --NavbarHoverColor: #636363;
+  --NavbarColor: #1c2c4c;
+  --NavbarHoverColor: #5f8da7;
 
-  --BackgroundColor: #353535;
+  --BackgroundColor: #1d232e;
 
-  --lightTextColor: #ffff;
+  --lightTextColor: #f8f9fc;
 
-  --LinkTextColor: #adadad;
+  --ScrollBarColor: #ffffff;
+  --ScrollBarDarkColor: #b2d4e7;
 
   --filterLight:invert();
 }
   
 html{
   background-color: var(--BackgroundColor);
+  font-size:clamp(1rem, 1rem,1.3rem);
 }
 
 a{
-  color: var(--LinkTextColor);
   text-decoration: none;
 }
+
+button .Tooltip{
+  font-size: 0.8rem;
+  opacity: 0%;
+  visibility: hidden;
+  background-color: rgb(41, 41, 41);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 0.3rem;
+
+  /* Position the tooltip */
+  position:absolute;
+  z-index: 2;
+  transition: all 0.5s;
+}
+
+button:hover .Tooltip{
+  visibility: visible;
+  opacity: 100%;
+}
+
 
 *{
   margin: 0;
@@ -35,18 +58,20 @@ a{
 .navbarContainer{
   z-index: 1;
   position:fixed;
+  width: 99.4vw;
 }
 
 .contentContainer{
-  margin:3rem 8rem 1rem 8rem;
   display:flex;
-  align-items:center;
-  flex-direction: column;
+  align-content:center;
+
+  margin-top:4rem;
+  width: 99.4vw;
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 0.6rem;
+  width: 0.5rem;
   height: 0.6rem;
 }
 
@@ -57,24 +82,23 @@ a{
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  min-height: 4rem;
-  min-width: 4rem;
+  border-radius: 6px 0 0 6px;
+  min-height: 9rem;
 
-  background:var(--LinkTextColor);
+  background:var(--ScrollBarColor);
   
   /* linear-gradient(120deg,#d62a2a, #ca572a, #d1ad35, #dadd30, #1cb135, #1fb2b9, #2d24b8)*/;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background:var(--NavbarHoverColor);
+  background:var(--ScrollBarDarkColor);
 }
 
 @media(max-width:720px){
 
   .contentContainer{
-    margin:3rem 0rem 0rem 0rem;
+    margin-top:0;
   }
 
   html{
